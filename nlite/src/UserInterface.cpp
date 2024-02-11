@@ -538,7 +538,7 @@ void UserInterface::HandleMouseEvent(SDL_Event *sdlEvent)
 				{
 					// decode screen jpg
 					SDL_RWops *rwop = SDL_RWFromConstMem(imageChunk.memory, imageChunk.size);
-					SDL_Surface *image = IMG_LoadJPG_RW(rwop);		
+					SDL_Surface *image = IMG_LoadPNG_RW(rwop);		
 					SDL_FreeRW(rwop);
 
 					// create new texture and show screen
@@ -852,7 +852,7 @@ void UserInterface::HandleKeyboardEvent(SDL_Event *sdlEvent)
 				{
 					// decode screen jpg
 					SDL_RWops *rwop = SDL_RWFromConstMem(imageChunk.memory, imageChunk.size);
-					SDL_Surface *image = IMG_LoadJPG_RW(rwop);		
+					SDL_Surface *image = IMG_LoadPNG_RW(rwop);		
 					SDL_FreeRW(rwop);
 
 					// create new texture and show screen
@@ -943,7 +943,7 @@ void UserInterface::StopPlayback(const char *message)
 		{
 			// decode screen jpg
 			SDL_RWops *rwop = SDL_RWFromConstMem(imageChunk.memory, imageChunk.size);
-			SDL_Surface *image = IMG_LoadJPG_RW(rwop);		
+			SDL_Surface *image = IMG_LoadPNG_RW(rwop);		
 			SDL_FreeRW(rwop);
 
 			// create new texture from result
